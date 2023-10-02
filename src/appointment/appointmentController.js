@@ -68,6 +68,17 @@ exports.listByDoctor = (req, res) => {
 }
 
 exports.update = (req, res) => {
+    var date = new Date(req.body.date)
+    //to check appointment date should be in future
+    if(!appointmentService.isDateInFuture(date)){
+        res.send('Date should be in future')
+        return
+    }
+    //to check date is not sunday
+    if(!appointmentService.isSunday(date)){
+        res.send('Date should not be sunday')
+        return
+    }
     appointment.findOneAndUpdate({ id: req.params.id }, req.body, (err, data) => {
         if (err) res.status(400).send(err);
 
