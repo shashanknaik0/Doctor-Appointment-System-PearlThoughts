@@ -1,7 +1,7 @@
 module.exports = () =>{
     const mongoose = require("mongoose")
 
-    const mongoURI = process.env.mongoURI || 'mongodb://127.0.0.1:27017/zuper'
+    const mongoURI = process.env.mongoURI || 'mongodb://127.0.0.1:27017/test'
 
     mongoose.connect(mongoURI,{
         useNewUrlParser:true,
