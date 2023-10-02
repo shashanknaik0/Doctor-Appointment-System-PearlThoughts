@@ -11,6 +11,7 @@ const appointment = require('../src/appointment/model/appointment.schema')
 const doctors = [
     {
         "id": 234555,
+        "_id": "64f4344c042d8411e46815e2",
         "name": "shashank",
         "age": 30,
         "address": "abc hospital",
@@ -18,6 +19,7 @@ const doctors = [
     },
     {
         "id": 999999,
+        "_id": "64f434a7042d8411e46815e5",
         "name": "abc",
         "age": 36,
         "address": "xyz hospital",
@@ -25,6 +27,7 @@ const doctors = [
     },
     {
         "id": 738282,
+        "_id": "64f434df042d8411e46815e8",
         "name": "xyz",
         "age": 40,
         "address": "abc hospital",
@@ -34,32 +37,32 @@ const doctors = [
 
 const appointments = [
     {
-        "doctorId":234555,
-        "pacient":{
+        "doctor":"64f4344c042d8411e46815e2",
+        "patient":{
             "name": "abcd",
             "age":30
         },
         "date": "2023-10-4"
     },
     {
-        "doctorId":234555,
-        "pacient":{
+        "doctor":"64f4344c042d8411e46815e2",
+        "patient":{
             "name": "efgh",
             "age":30
         },
         "date": "2023-10-5"
     },
     {
-        "doctorId":999999,
-        "pacient":{
+        "doctor":"64f434a7042d8411e46815e5",
+        "patient":{
             "name": "ijkl",
             "age":38
         },
         "date": "2023-10-4"
     },
     {
-        "doctorId":738282,
-        "pacient":{
+        "doctor":"64f434df042d8411e46815e8",
+        "patient":{
             "name": "pqrs",
             "age":32
         },
